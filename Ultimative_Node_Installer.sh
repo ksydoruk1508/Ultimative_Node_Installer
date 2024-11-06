@@ -1,4 +1,14 @@
 #!/bin/bash
+
+# Цвета текста
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m' # Нет цвета (сброс цвета)
+
 # Проверка наличия curl и установка, если не установлен
 if ! command -v curl &> /dev/null; then
     sudo apt update
@@ -42,14 +52,18 @@ EOF
 echo -e "${NC}"
 
 while true; do
-    echo "Выберите ноду для установки:"
-    echo "1. OceanProtocol"
-    echo "2. ElixirNode"
-    echo "3. NesaNode"
-    echo "4. RivalzNode"
-    echo "Выберите утилиту для установки:"
-    echo "5. Monitoring of servers"
-    echo "6. Выйти"
+    echo -e "${YELLOW}Выберите ноду для установки:${NC}"
+    echo " "
+    echo -e "${CYAN}1. OceanProtocol${NC}"
+    echo -e "${CYAN}2. ElixirNode${NC}"
+    echo -e "${CYAN}3. NesaNode${NC}"
+    echo -e "${CYAN}4. RivalzNode${NC}"
+    echo " "
+    echo -e "${YELLOW}Выберите утилиту для установки:${NC}"
+    echo " "
+    echo -e "${CYAN}5. Monitoring of servers${NC}"
+    echo -e "${CYAN}6. Выйти${NC}"
+    echo -e " "
     read -p "Введите номер опции: " choice
 
     case $choice in
