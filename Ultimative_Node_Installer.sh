@@ -1,99 +1,80 @@
 #!/bin/bash
+# Проверка наличия curl и установка, если не установлен
+if ! command -v curl &> /dev/null; then
+    sudo apt update
+    sudo apt install curl -y
+fi
+sleep 1
 
-function install_node {
-    echo "Updating and upgrading system packages..."
-    sudo apt-get update -y && sudo apt upgrade -y
-    echo "Installing dependencies..."
-    sudo apt-get install make screen build-essential unzip lz4 gcc git jq -y
+echo -e "${GREEN}"
+cat << "EOF"
+██    ██ ██      ████████ ██ ███    ███  █████  ████████ ██ ██    ██ ███████     ███    ██  ██████  ██████  ███████ 
+██    ██ ██         ██    ██ ████  ████ ██   ██    ██    ██ ██    ██ ██          ████   ██ ██    ██ ██   ██ ██      
+██    ██ ██         ██    ██ ██ ████ ██ ███████    ██    ██ ██    ██ █████       ██ ██  ██ ██    ██ ██   ██ █████   
+██    ██ ██         ██    ██ ██  ██  ██ ██   ██    ██    ██  ██  ██  ██          ██  ██ ██ ██    ██ ██   ██ ██      
+ ██████  ███████    ██    ██ ██      ██ ██   ██    ██    ██   ████   ███████     ██   ████  ██████  ██████  ███████ 
+                                                                                                                    
+                                                                                                                    
+                    ██ ███    ██ ███████ ████████  █████  ██      ██      ███████ ██████                            
+                    ██ ████   ██ ██         ██    ██   ██ ██      ██      ██      ██   ██                           
+                    ██ ██ ██  ██ ███████    ██    ███████ ██      ██      █████   ██████                            
+                    ██ ██  ██ ██      ██    ██    ██   ██ ██      ██      ██      ██   ██                           
+                    ██ ██   ████ ███████    ██    ██   ██ ███████ ███████ ███████ ██   ██
 
-    echo "Installing Go..."
-    sudo rm -rf /usr/local/go
-    curl -Ls https://go.dev/dl/go1.22.4.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
-    eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
-    eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
+________________________________________________________________________________________________________________________________________
 
-    echo "Downloading project repository..."
-    wget https://github.com/hemilabs/heminetwork/releases/download/v0.5.0/heminetwork_v0.5.0_linux_amd64.tar.gz
-    tar -xvf heminetwork_v0.5.0_linux_amd64.tar.gz
-    rm -rf heminetwork_v0.5.0_linux_amd64.tar.gz
-    cd heminetwork_v0.5.0_linux_amd64/
 
-    echo "Creating wallet..."
-    ./keygen -secp256k1 -json -net="testnet" > /root/heminetwork_v0.5.0_linux_amd64/popm-address.json
-    cat popm-address.json
-    echo "Save the above file and its data - this is your wallet!"
+███████  ██████  ██████      ██   ██ ███████ ███████ ██████      ██ ████████     ████████ ██████   █████  ██████  ██ ███    ██  ██████  
+██      ██    ██ ██   ██     ██  ██  ██      ██      ██   ██     ██    ██           ██    ██   ██ ██   ██ ██   ██ ██ ████   ██ ██       
+█████   ██    ██ ██████      █████   █████   █████   ██████      ██    ██           ██    ██████  ███████ ██   ██ ██ ██ ██  ██ ██   ███ 
+██      ██    ██ ██   ██     ██  ██  ██      ██      ██          ██    ██           ██    ██   ██ ██   ██ ██   ██ ██ ██  ██ ██ ██    ██ 
+██       ██████  ██   ██     ██   ██ ███████ ███████ ██          ██    ██           ██    ██   ██ ██   ██ ██████  ██ ██   ████  ██████  
+                                                                                                                                        
+                                                                                                                                       
+ ██  ██████  ██       █████  ███    ██ ██████   █████  ███    ██ ████████ ███████                                                         
+██  ██        ██     ██   ██ ████   ██ ██   ██ ██   ██ ████   ██    ██    ██                                                             
+██  ██        ██     ███████ ██ ██  ██ ██   ██ ███████ ██ ██  ██    ██    █████                                                          
+██  ██        ██     ██   ██ ██  ██ ██ ██   ██ ██   ██ ██  ██ ██    ██    ██                                                             
+ ██  ██████  ██      ██   ██ ██   ████ ██████  ██   ██ ██   ████    ██    ███████
 
-    read -p "Enter your private key: " PRIVATE_KEY
-    echo "export POPM_PRIVATE_KEY=$PRIVATE_KEY" >> ~/.bashrc
-    echo "export POPM_STATIC_FEE=5000" >> ~/.bashrc
-    echo "export POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public" >> ~/.bashrc
-    source ~/.bashrc
-
-    echo "Creating service file..."
-    sudo tee /etc/systemd/system/hemid.service > /dev/null <<EOF
-[Unit]
-Description=Hemi
-After=network.target
-
-[Service]
-User=$USER
-Environment="POPM_BTC_PRIVKEY=$POPM_PRIVATE_KEY"
-Environment="POPM_STATIC_FEE=5000"
-Environment="POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public"
-WorkingDirectory=/root/heminetwork_v0.5.0_linux_amd64
-ExecStart=/root/heminetwork_v0.5.0_linux_amd64/popmd
-Restart=on-failure
-RestartSec=10
-LimitNOFILE=65535
-
-[Install]
-WantedBy=multi-user.target
+Donate: 0x0004230c13c3890F34Bb9C9683b91f539E809000
 EOF
+echo -e "${NC}"
 
-    echo "Starting service..."
-    sudo systemctl enable hemid
-    sudo systemctl daemon-reload
-    sudo systemctl start hemid
-    echo "Node installation complete."
-}
+while true; do
+    echo "Выберите ноду для установки:"
+    echo "1. OceanProtocol"
+    echo "2. ElixirNode"
+    echo "3. NesaNode"
+    echo "4. RivalzNode"
+    echo "Выберите утилиту для установки:"
+    echo "5. Monitoring of servers"
+    echo "6. Выйти"
+    read -p "Введите номер опции: " choice
 
-function change_port {
-    read -p "Enter new port number: " NEW_PORT
-    sudo sed -i "s/Environment=\"POPM_BFG_URL=wss:\/\/testnet\.rpc\.hemi\.network\/v1\/ws\/public\"/Environment=\"POPM_BFG_URL=wss:\/\/testnet\.rpc\.hemi\.network:\$NEW_PORT\/v1\/ws\/public\"/g" /etc/systemd/system/hemid.service
-    sudo systemctl daemon-reload
-    sudo systemctl restart hemid
-    echo "Port changed to $NEW_PORT."
-}
-
-function remove_node {
-    echo "Stopping and disabling service..."
-    sudo systemctl stop hemid
-    sudo systemctl disable hemid
-    sudo rm /etc/systemd/system/hemid.service
-    sudo systemctl daemon-reload
-    echo "Removing node files..."
-    rm -rf /root/heminetwork_v0.5.0_linux_amd64
-    echo "Node removed successfully."
-}
-
-PS3="Please select an option: "
-options=("Install Node" "Change Port" "Remove Node" "Exit")
-select opt in "${options[@]}"; do
-    case $opt in
-        "Install Node")
-            install_node
+    case $choice in
+        1)
+            wget -q -O OceanProtocolNode.sh https://raw.githubusercontent.com/ksydoruk1508/OceanProtocolNode/main/OceanProtocolNode.sh && sudo chmod +x OceanProtocolNode.sh && ./OceanProtocolNode.sh
             ;;
-        "Change Port")
-            change_port
+        2)
+            wget -q -O ElixirNode.sh https://raw.githubusercontent.com/ksydoruk1508/ElixirNode/main/ElixirNode.sh && sudo chmod +x ElixirNode.sh && ./ElixirNode.sh
             ;;
-        "Remove Node")
-            remove_node
+        3)
+            wget -q -O NesaNode.sh https://raw.githubusercontent.com/ksydoruk1508/NesaNode/main/NesaNode.sh && sudo chmod +x NesaNode.sh && ./NesaNode.sh
             ;;
-        "Exit")
+        4)
+            wget -q -O RivalzNode.sh https://raw.githubusercontent.com/ksydoruk1508/RivalzNode/main/RivalzNode.sh && sudo chmod +x RivalzNode.sh && ./RivalzNode.sh
+            ;;
+        5)
+            wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
+            ;;
+        6)
+            echo "Выход..."
             break
             ;;
         *)
-            echo "Invalid option $REPLY"
+            echo "Неверный выбор. Пожалуйста, выберите номер от 1 до 6."
             ;;
     esac
+    echo ""
 done
