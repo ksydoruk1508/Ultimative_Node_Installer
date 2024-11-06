@@ -58,11 +58,13 @@ while true; do
     echo -e "${CYAN}2. ElixirNode${NC}"
     echo -e "${CYAN}3. NesaNode${NC}"
     echo -e "${CYAN}4. RivalzNode${NC}"
+    echo -e "${CYAN}5. HemiNode${NC}"
     echo " "
     echo -e "${YELLOW}Выберите утилиту для установки:${NC}"
     echo " "
-    echo -e "${CYAN}5. Monitoring of servers${NC}"
-    echo -e "${CYAN}6. Выйти${NC}"
+    echo -e "${CYAN}6. Monitoring of servers${NC}"
+    echo -e " "
+    echo -e "${CYAN}7. Выйти${NC}"
     echo -e " "
     read -p "Введите номер опции: " choice
 
@@ -80,9 +82,12 @@ while true; do
             wget -q -O RivalzNode.sh https://raw.githubusercontent.com/ksydoruk1508/RivalzNode/main/RivalzNode.sh && sudo chmod +x RivalzNode.sh && ./RivalzNode.sh
             ;;
         5)
-            wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
+            wget -q -O HemiNode.sh https://raw.githubusercontent.com/ksydoruk1508/HemiNode/main/HemiNode.sh && sudo chmod +x HemiNode.sh && ./HemiNode.sh
             ;;
         6)
+            wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
+            ;;
+        7)
             echo "Выход..."
             break
             ;;
