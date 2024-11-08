@@ -71,37 +71,38 @@ while true; do
     read -p "Введите номер опции: " choice
 
     case $choice in
-        1)
-            wget -q -O OceanProtocolNode.sh https://raw.githubusercontent.com/ksydoruk1508/OceanProtocolNode/main/OceanProtocolNode.sh && sudo chmod +x OceanProtocolNode.sh && ./OceanProtocolNode.sh
-            ;;
-        2)
-            wget -q -O ElixirNode.sh https://raw.githubusercontent.com/ksydoruk1508/ElixirNode/main/ElixirNode.sh && sudo chmod +x ElixirNode.sh && ./ElixirNode.sh
-            ;;
-        3)
-            wget -q -O NesaNode.sh https://raw.githubusercontent.com/ksydoruk1508/NesaNode/main/NesaNode.sh && sudo chmod +x NesaNode.sh && ./NesaNode.sh
-            ;;
-        4)
-            wget -q -O RivalzNode.sh https://raw.githubusercontent.com/ksydoruk1508/RivalzNode/main/RivalzNode.sh && sudo chmod +x RivalzNode.sh && ./RivalzNode.sh
-            ;;
-        5)
-            wget -q -O HemiNode.sh https://raw.githubusercontent.com/ksydoruk1508/HemiNode/main/HemiNode.sh && sudo chmod +x HemiNode.sh && ./HemiNode.sh
-            ;;
-        6)
-            wget -q -O ICN_node.sh https://raw.githubusercontent.com/ksydoruk1508/ICN_node/main/ICN_node.sh && sudo chmod +x ICN_node.sh && ./ICN_node.sh
-            ;;
-        7)
-            wget -q -O Vana.sh https://raw.githubusercontent.com/ksydoruk1508/Vana/main/Vana.sh && sudo chmod +x Vana.sh && ./Vana.sh
-            ;;
-        8)
-            wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
-            ;;
-        9)
-            echo "Выход..."
-            break
-            ;;
-        *)
-            echo "Неверный выбор. Пожалуйста, выберите номер от 1 до 9."
-            ;;
-    esac
+    1)
+        wget -q -O OceanProtocolNode.sh https://raw.githubusercontent.com/ksydoruk1508/OceanProtocolNode/main/OceanProtocolNode.sh && sudo chmod +x OceanProtocolNode.sh && exec ./OceanProtocolNode.sh
+        ;;
+    2)
+        wget -q -O ElixirNode.sh https://raw.githubusercontent.com/ksydoruk1508/ElixirNode/main/ElixirNode.sh && sudo chmod +x ElixirNode.sh && exec ./ElixirNode.sh
+        ;;
+    3)
+        wget -q -O NesaNode.sh https://raw.githubusercontent.com/ksydoruk1508/NesaNode/main/NesaNode.sh && sudo chmod +x NesaNode.sh && exec ./NesaNode.sh
+        ;;
+    4)
+        wget -q -O RivalzNode.sh https://raw.githubusercontent.com/ksydoruk1508/RivalzNode/main/RivalzNode.sh && sudo chmod +x RivalzNode.sh && exec ./RivalzNode.sh
+        ;;
+    5)
+        wget -q -O HemiNode.sh https://raw.githubusercontent.com/ksydoruk1508/HemiNode/main/HemiNode.sh && sudo chmod +x HemiNode.sh && exec ./HemiNode.sh
+        ;;
+    6)
+        wget -q -O ICN_node.sh https://raw.githubusercontent.com/ksydoruk1508/ICN_node/main/ICN_node.sh && sudo chmod +x ICN_node.sh && exec ./ICN_node.sh
+        ;;
+    7)
+        wget -q -O Vana.sh https://raw.githubusercontent.com/ksydoruk1508/Vana/main/Vana.sh && sudo chmod +x Vana.sh && exec ./Vana.sh
+        ;;
+    8)
+        wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && exec ./Monitoring_of_servers.sh
+        ;;
+    9)
+        echo "Выход..."
+        break
+        ;;
+    *)
+        echo "Неверный выбор. Пожалуйста, выберите номер от 1 до 9."
+        ;;
+esac
+
     echo ""
 done
