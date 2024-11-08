@@ -59,13 +59,14 @@ while true; do
     echo -e "${CYAN}4. RivalzNode${NC}"
     echo -e "${CYAN}5. HemiNode${NC}"
     echo -e "${CYAN}6. Impossible Cloud Network${NC}"
-    echo -e "${CYAN}7. Vana - SUSPENDED${NC}"
+    echo -e "${CYAN}7. Vana${NC} ${RED}- SUSPENDED${NC}"
+    echo -e "${CYAN}8. Nillon${NC}"
     echo " "
     echo -e "${YELLOW}Выберите утилиту для установки:${NC}"
     echo " "
-    echo -e "${CYAN}8. Monitoring of servers${NC}"
+    echo -e "${CYAN}9. Monitoring of servers${NC}"
     echo -e " "
-    echo -e "${CYAN}9. Выйти${NC}"
+    echo -e "${CYAN}10. Выйти${NC}"
     echo -e " "
     echo -e "${PURPLE}Все текстовые гайды - https://teletype.in/@c6zr7${NC}"
     read -p "Введите номер опции: " choice
@@ -93,14 +94,17 @@ while true; do
             wget -q -O Vana.sh https://raw.githubusercontent.com/ksydoruk1508/Vana/main/Vana.sh && sudo chmod +x Vana.sh && ./Vana.sh
             ;;
         8)
+            wget -q -O Nillion.sh https://raw.githubusercontent.com/ksydoruk1508/Nillion/main/Nillion.sh && sudo chmod +x Nillion.sh && ./Nillion.sh
+            ;;    
+        9)
             wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
             ;;
-        9)
+        10)
             echo "Выход..."
             break
             ;;
         *)
-        echo "Неверный выбор. Пожалуйста, выберите номер от 1 до 9."
+        echo "Неверный выбор. Пожалуйста, выберите номер от 1 до 10."
         ;;
 esac
 
