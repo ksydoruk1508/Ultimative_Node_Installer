@@ -84,7 +84,7 @@ while true; do
         wget -q -O RivalzNode.sh https://raw.githubusercontent.com/ksydoruk1508/RivalzNode/main/RivalzNode.sh && sudo chmod +x RivalzNode.sh && exec ./RivalzNode.sh
         ;;
     5)
-        wget -q -O HemiNode.sh https://raw.githubusercontent.com/ksydoruk1508/HemiNode/main/HemiNode.sh && sudo chmod +x HemiNode.sh && exec ./HemiNode.sh
+        wget -q -O Hemi.sh https://raw.githubusercontent.com/ksydoruk1508/Hemi/main/Hemi.sh && sudo chmod +x HemiNode.sh && exec ./HemiNode.sh
         ;;
     6)
         wget -q -O ICN_node.sh https://raw.githubusercontent.com/ksydoruk1508/ICN_node/main/ICN_node.sh && sudo chmod +x ICN_node.sh && exec ./ICN_node.sh
