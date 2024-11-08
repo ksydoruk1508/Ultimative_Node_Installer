@@ -60,13 +60,15 @@ while true; do
     echo -e "${CYAN}4. RivalzNode${NC}"
     echo -e "${CYAN}5. HemiNode${NC}"
     echo -e "${CYAN}6. Impossible Cloud Network${NC}"
+    echo -e "${CYAN}7. Vana${NC}"
     echo " "
     echo -e "${YELLOW}Выберите утилиту для установки:${NC}"
     echo " "
-    echo -e "${CYAN}7. Monitoring of servers${NC}"
+    echo -e "${CYAN}8. Monitoring of servers${NC}"
     echo -e " "
-    echo -e "${CYAN}8. Выйти${NC}"
+    echo -e "${CYAN}9. Выйти${NC}"
     echo -e " "
+    echo -e "${PURPLE}Все текстовые гайды - https://teletype.in/@c6zr7${NC}"
     read -p "Введите номер опции: " choice
 
     case $choice in
@@ -89,9 +91,12 @@ while true; do
             wget -q -O ICN_node.sh https://raw.githubusercontent.com/ksydoruk1508/ICN_node/main/ICN_node.sh && sudo chmod +x ICN_node.sh && ./ICN_node.sh
             ;;
         7)
-            wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
+            wget -q -O Vana.sh https://raw.githubusercontent.com/ksydoruk1508/Vana/main/Vana.sh && sudo chmod +x Vana.sh && ./Vana.sh
             ;;
         8)
+            wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
+            ;;
+        9)
             echo "Выход..."
             break
             ;;
