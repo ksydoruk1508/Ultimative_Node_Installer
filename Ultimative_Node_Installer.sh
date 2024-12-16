@@ -47,6 +47,7 @@ ________________________________________________________________________________
  ██  ██████  ██      ██   ██ ██   ████ ██████  ██   ██ ██   ████    ██    ███████
 
 Donate: 0x0004230c13c3890F34Bb9C9683b91f539E809000
+${PURPLE}Все текстовые гайды - https://teletype.in/@c6zr7${NC}"
 EOF
 echo -e "${NC}"
 
@@ -67,7 +68,6 @@ while true; do
     echo -e "${CYAN}9. Monitoring of servers${NC}"
     echo -e " "
     echo -e "${CYAN}10. Выйти${NC}"
-    echo -e "${PURPLE}Все текстовые гайды - https://teletype.in/@c6zr7${NC}"
     read -p "Введите номер опции: " choice
 
     case $choice in
