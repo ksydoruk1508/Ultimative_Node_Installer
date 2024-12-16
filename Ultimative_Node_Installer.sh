@@ -67,7 +67,6 @@ while true; do
     echo -e "${CYAN}9. Monitoring of servers${NC}"
     echo -e " "
     echo -e "${CYAN}10. Выйти${NC}"
-    echo -e " "
     echo -e "${PURPLE}Все текстовые гайды - https://teletype.in/@c6zr7${NC}"
     read -p "Введите номер опции: " choice
 
