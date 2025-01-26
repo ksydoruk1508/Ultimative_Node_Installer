@@ -59,7 +59,7 @@ while true; do
     echo -e "${CYAN}4. RivalzNode${NC}"
     echo -e "${CYAN}5. HemiNode${NC}"
     echo -e "${CYAN}6. Impossible Cloud Network${NC} ${RED}- END${NC}"
-    echo -e "${CYAN}7. Vana${NC} ${RED}- SUSPENDED${NC}"
+    echo -e "${CYAN}7. Vana${NC} ${RED}- END${NC}"
     echo -e "${CYAN}8. Nillion${NC} ${RED}- END${NC}"
     echo " "
     echo -e "${YELLOW}Выберите утилиту для установки:${NC}"
