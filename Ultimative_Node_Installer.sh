@@ -51,7 +51,7 @@ EOF
 echo -e "${NC}"
 
 while true; do
-    echo -e "${YELLOW}Выберите ноду для установки:${NC}"
+    echo -e "${YELLOW}Выберите ноду для установки / Select a node for installation:${NC}"
     echo " "
     echo -e "${CYAN}1. OceanProtocol${NC}"
     echo -e "${CYAN}2. ElixirNode${NC}"
@@ -63,13 +63,13 @@ while true; do
     echo -e "${CYAN}8. Nillion${NC} ${RED}- END${NC}"
     echo -e "${CYAN}9. Cysic${NC}"
     echo " "
-    echo -e "${YELLOW}Выберите утилиту для установки:${NC}"
+    echo -e "${YELLOW}Выберите утилиту для установки / Select a utility for installation:${NC}"
     echo " "
     echo -e "${CYAN}10. Monitoring of servers${NC}"
     echo -e " "
-    echo -e "${PURPLE}Все текстовые гайды - https://teletype.in/@c6zr7${NC}"
-    echo -e "${CYAN}11. Выйти${NC}"
-    read -p "Введите номер опции: " choice
+    echo -e "${PURPLE}Все текстовые гайды / All text guides - https://teletype.in/@c6zr7${NC}"
+    echo -e "${CYAN}11. Выйти / Exit${NC}"
+    read -p "Введите номер опции / Enter the option number: " choice
 
     case $choice in
         1)
