@@ -61,13 +61,14 @@ while true; do
     echo -e "${CYAN}6. Impossible Cloud Network${NC} ${RED}- END${NC}"
     echo -e "${CYAN}7. Vana${NC} ${RED}- END${NC}"
     echo -e "${CYAN}8. Nillion${NC} ${RED}- END${NC}"
+    echo -e "${CYAN}9. Cysic${NC}"
     echo " "
     echo -e "${YELLOW}Выберите утилиту для установки:${NC}"
     echo " "
-    echo -e "${CYAN}9. Monitoring of servers${NC}"
+    echo -e "${CYAN}10. Monitoring of servers${NC}"
     echo -e " "
     echo -e "${PURPLE}Все текстовые гайды - https://teletype.in/@c6zr7${NC}"
-    echo -e "${CYAN}10. Выйти${NC}"
+    echo -e "${CYAN}11. Выйти${NC}"
     read -p "Введите номер опции: " choice
 
     case $choice in
@@ -96,14 +97,17 @@ while true; do
             wget -q -O Nillion.sh https://raw.githubusercontent.com/ksydoruk1508/Nillion/main/Nillion.sh && sudo chmod +x Nillion.sh && ./Nillion.sh
             ;;    
         9)
+            wget -q -O CysicNode.sh https://raw.githubusercontent.com/ksydoruk1508/CysicNode/main/CysicNode.sh && sudo chmod +x CysicNode.sh && ./CysicNode.sh
+            ;; 
+        10)
             wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
             ;;
-        10)
+        11)
             echo "Выход..."
             break
             ;;
         *)
-        echo "Неверный выбор. Пожалуйста, выберите номер от 1 до 10."
+        echo "Неверный выбор. Пожалуйста, выберите номер от 1 до 11."
         ;;
 esac
 
