@@ -103,7 +103,7 @@ while true; do
             wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
             ;;
         11)
-            echo "Выход..."
+            echo "Выход / Exit..."
             break
             ;;
         *)
