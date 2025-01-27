@@ -107,7 +107,7 @@ while true; do
             break
             ;;
         *)
-        echo "Неверный выбор. Пожалуйста, выберите номер от 1 до 11."
+        echo "Неверный выбор. Пожалуйста, выберите номер от 1 до 11 / Invalid selection. Please choose a number from 1 to 11."
         ;;
 esac
 
