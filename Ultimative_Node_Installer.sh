@@ -56,7 +56,7 @@ while true; do
     echo -e "${CYAN}1. OceanProtocol${NC}"
     echo -e "${CYAN}2. ElixirNode${NC}"
     echo -e "${CYAN}3. NesaNode${NC}"
-    echo -e "${CYAN}4. RivalzNode${NC}"
+    echo -e "${CYAN}4. RivalzNode${NC} ${RED}- END${NC}"
     echo -e "${CYAN}5. HemiNode${NC}"
     echo -e "${CYAN}6. Impossible Cloud Network${NC} ${RED}- END${NC}"
     echo -e "${CYAN}7. Vana${NC} ${RED}- END${NC}"
