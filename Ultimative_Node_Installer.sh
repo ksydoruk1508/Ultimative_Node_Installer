@@ -58,17 +58,18 @@ while true; do
     echo -e "${CYAN}3. NesaNode${NC}"
     echo -e "${CYAN}4. RivalzNode${NC} ${RED}- END${NC}"
     echo -e "${CYAN}5. HemiNode${NC}"
-    echo -e "${CYAN}6. Impossible Cloud Network${NC} ${RED}- END${NC}"
-    echo -e "${CYAN}7. Vana${NC} ${RED}- END${NC}"
-    echo -e "${CYAN}8. Nillion${NC} ${RED}- END${NC}"
-    echo -e "${CYAN}9. Cysic${NC}"
+    echo -e "${CYAN}6. Gaianet${NC} ${RED}- END${NC}"
+    echo -e "${CYAN}7. Impossible Cloud Network${NC} ${RED}- END${NC}"
+    echo -e "${CYAN}8. Vana${NC} ${RED}- END${NC}"
+    echo -e "${CYAN}9. Nillion${NC} ${RED}- END${NC}"
+    echo -e "${CYAN}10. Cysic${NC}"
     echo " "
     echo -e "${YELLOW}Выберите утилиту для установки / Select a utility for installation:${NC}"
     echo " "
-    echo -e "${CYAN}10. Monitoring of servers${NC}"
+    echo -e "${CYAN}11. Monitoring of servers${NC}"
     echo -e " "
     echo -e "${PURPLE}Все текстовые гайды / All text guides - https://teletype.in/@c6zr7${NC}"
-    echo -e "${CYAN}11. Выйти / Exit${NC}"
+    echo -e "${CYAN}12. Выйти / Exit${NC}"
     read -p "Введите номер опции / Enter the option number: " choice
 
     case $choice in
@@ -87,22 +88,25 @@ while true; do
         5)
             wget -q -O Hemi.sh https://raw.githubusercontent.com/ksydoruk1508/Hemi/main/Hemi.sh && sudo chmod +x Hemi.sh && ./Hemi.sh
             ;;
-        6)
-            wget -q -O ICN_node.sh https://raw.githubusercontent.com/ksydoruk1508/ICN_node/main/ICN_node.sh && sudo chmod +x ICN_node.sh && ./ICN_node.sh
+        6)  
+            wget -q -O GaianetNode.sh https://raw.githubusercontent.com/ksydoruk1508/GaianetNode/main/GaianetNode.sh && sudo chmod +x GaianetNode.sh && ./GaianetNode.sh
             ;;
         7)
-            wget -q -O Vana.sh https://raw.githubusercontent.com/ksydoruk1508/Vana/main/Vana.sh && sudo chmod +x Vana.sh && ./Vana.sh
+            wget -q -O ICN_node.sh https://raw.githubusercontent.com/ksydoruk1508/ICN_node/main/ICN_node.sh && sudo chmod +x ICN_node.sh && ./ICN_node.sh
             ;;
         8)
+            wget -q -O Vana.sh https://raw.githubusercontent.com/ksydoruk1508/Vana/main/Vana.sh && sudo chmod +x Vana.sh && ./Vana.sh
+            ;;
+        9)
             wget -q -O Nillion.sh https://raw.githubusercontent.com/ksydoruk1508/Nillion/main/Nillion.sh && sudo chmod +x Nillion.sh && ./Nillion.sh
             ;;    
-        9)
+        10)
             wget -q -O CysicNode.sh https://raw.githubusercontent.com/ksydoruk1508/CysicNode/main/CysicNode.sh && sudo chmod +x CysicNode.sh && ./CysicNode.sh
             ;; 
-        10)
+        11)
             wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
             ;;
-        11)
+        12)
             echo "Выход / Exit..."
             break
             ;;
