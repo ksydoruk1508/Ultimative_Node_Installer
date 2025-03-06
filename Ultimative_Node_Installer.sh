@@ -54,7 +54,7 @@ while true; do
     echo -e "${YELLOW}Выберите ноду для установки / Select a node for installation:${NC}"
     echo " "
     echo -e "${CYAN}1. OceanProtocol${NC}"
-    echo -e "${CYAN}2. ElixirNode${NC}"
+    echo -e "${CYAN}2. ElixirNode${NC} ${RED}- END${NC}"
     echo -e "${CYAN}3. NesaNode${NC}"
     echo -e "${CYAN}4. RivalzNode${NC} ${RED}- END${NC}"
     echo -e "${CYAN}5. HemiNode${NC}"
