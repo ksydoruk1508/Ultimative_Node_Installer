@@ -66,6 +66,7 @@ while true; do
     echo -e "${CYAN}11. TitanNode${NC}"
     echo -e "${CYAN}12. T3rnNode${NC}"
     echo -e "${CYAN}13. GensynNode${NC}"
+    echo -e "${CYAN}14. UnichainNode${NC}"
     echo " "
     echo -e "${YELLOW}Выберите утилиту для установки / Select a utility for installation:${NC}"
     echo " "
@@ -114,6 +115,9 @@ while true; do
             ;;
         13) 
             wget -q -O GensynNode.sh https://raw.githubusercontent.com/ksydoruk1508/GensynNode/main/GensynNode.sh && sudo chmod +x GensynNode.sh && ./GensynNode.sh
+            ;;
+        14) 
+            wget -q -O UnichainNode.sh https://raw.githubusercontent.com/ksydoruk1508/UnichainNode/main/UnichainNode.sh && sudo chmod +x UnichainNode.sh && ./UnichainNode.sh
             ;;
         20)
             wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
