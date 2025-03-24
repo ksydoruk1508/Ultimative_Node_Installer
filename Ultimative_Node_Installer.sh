@@ -62,15 +62,17 @@ while true; do
     echo -e "${CYAN}7. Impossible Cloud Network${NC} ${RED}- END${NC}"
     echo -e "${CYAN}8. Vana${NC} ${RED}- END${NC}"
     echo -e "${CYAN}9. Nillion${NC} ${RED}- END${NC}"
-    echo -e "${CYAN}10. Cysic${NC}"
-    echo -e "${CYAN}11. Titan${NC}"
+    echo -e "${CYAN}10. CysicNode${NC}"
+    echo -e "${CYAN}11. TitanNode${NC}"
+    echo -e "${CYAN}12. T3rnNode${NC}"
+    echo -e "${CYAN}13. GensynNode${NC}"
     echo " "
     echo -e "${YELLOW}Выберите утилиту для установки / Select a utility for installation:${NC}"
     echo " "
-    echo -e "${CYAN}12. Monitoring of servers${NC}"
+    echo -e "${CYAN}20. Monitoring of servers${NC}"
     echo -e " "
     echo -e "${PURPLE}Все текстовые гайды / All text guides - https://teletype.in/@c6zr7${NC}"
-    echo -e "${CYAN}13. Выйти / Exit${NC}"
+    echo -e "${CYAN}21. Выйти / Exit${NC}"
     read -p "Введите номер опции / Enter the option number: " choice
 
     case $choice in
@@ -107,10 +109,16 @@ while true; do
         11) 
             wget -q -O TitanNode.sh https://raw.githubusercontent.com/ksydoruk1508/TitanNode/main/TitanNode.sh && sudo chmod +x TitanNode.sh && ./TitanNode.sh
             ;;
-        12)
+        12) 
+            wget -q -O t3rn.sh https://raw.githubusercontent.com/ksydoruk1508/t3rn/main/t3rn.sh && sudo chmod +x t3rn.sh && ./t3rn.sh
+            ;;
+        13) 
+            wget -q -O GensynNode.sh https://raw.githubusercontent.com/ksydoruk1508/GensynNode/main/GensynNode.sh && sudo chmod +x GensynNode.sh && ./GensynNode.sh
+            ;;
+        20)
             wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
             ;;
-        13)
+        21)
             echo "Выход / Exit..."
             break
             ;;
