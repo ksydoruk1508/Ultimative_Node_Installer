@@ -78,49 +78,49 @@ while true; do
 
     case $choice in
         1)
-            wget -q -O OceanProtocolNode.sh https://raw.githubusercontent.com/ksydoruk1508/OceanProtocolNode/main/OceanProtocolNode.sh && sudo chmod +x OceanProtocolNode.sh && ./OceanProtocolNode.sh
+            rm -f OceanProtocolNode.sh && wget -q -O OceanProtocolNode.sh https://raw.githubusercontent.com/ksydoruk1508/OceanProtocolNode/main/OceanProtocolNode.sh && sudo chmod +x OceanProtocolNode.sh && ./OceanProtocolNode.sh
             ;;
         2)
-            wget -q -O ElixirNode.sh https://raw.githubusercontent.com/ksydoruk1508/ElixirNode/main/ElixirNode.sh && sudo chmod +x ElixirNode.sh && ./ElixirNode.sh
+            rm -f ElixirNode.sh && wget -q -O ElixirNode.sh https://raw.githubusercontent.com/ksydoruk1508/ElixirNode/main/ElixirNode.sh && sudo chmod +x ElixirNode.sh && ./ElixirNode.sh
             ;;
         3)
-            wget -q -O NesaNode.sh https://raw.githubusercontent.com/ksydoruk1508/NesaNode/main/NesaNode.sh && sudo chmod +x NesaNode.sh && ./NesaNode.sh
+            rm -f NesaNode.sh && wget -q -O NesaNode.sh https://raw.githubusercontent.com/ksydoruk1508/NesaNode/main/NesaNode.sh && sudo chmod +x NesaNode.sh && ./NesaNode.sh
             ;;
         4)
-            wget -q -O RivalzNode.sh https://raw.githubusercontent.com/ksydoruk1508/RivalzNode/main/RivalzNode.sh && sudo chmod +x RivalzNode.sh && ./RivalzNode.sh
+            rm -f RivalzNode.sh && wget -q -O RivalzNode.sh https://raw.githubusercontent.com/ksydoruk1508/RivalzNode/main/RivalzNode.sh && sudo chmod +x RivalzNode.sh && ./RivalzNode.sh
             ;;
         5)
-            wget -q -O Hemi.sh https://raw.githubusercontent.com/ksydoruk1508/Hemi/main/Hemi.sh && sudo chmod +x Hemi.sh && ./Hemi.sh
+            rm -f Hemi.sh && wget -q -O Hemi.sh https://raw.githubusercontent.com/ksydoruk1508/Hemi/main/Hemi.sh && sudo chmod +x Hemi.sh && ./Hemi.sh
             ;;
         6)  
-            wget -q -O GaianetNode.sh https://raw.githubusercontent.com/ksydoruk1508/GaianetNode/main/GaianetNode.sh && sudo chmod +x GaianetNode.sh && ./GaianetNode.sh
+            rm -f GaianetNode.sh && wget -q -O GaianetNode.sh https://raw.githubusercontent.com/ksydoruk1508/GaianetNode/main/GaianetNode.sh && sudo chmod +x GaianetNode.sh && ./GaianetNode.sh
             ;;
         7)
-            wget -q -O ICN_node.sh https://raw.githubusercontent.com/ksydoruk1508/ICN_node/main/ICN_node.sh && sudo chmod +x ICN_node.sh && ./ICN_node.sh
+            rm -f ICN_node.sh && wget -q -O ICN_node.sh https://raw.githubusercontent.com/ksydoruk1508/ICN_node/main/ICN_node.sh && sudo chmod +x ICN_node.sh && ./ICN_node.sh
             ;;
         8)
-            wget -q -O Vana.sh https://raw.githubusercontent.com/ksydoruk1508/Vana/main/Vana.sh && sudo chmod +x Vana.sh && ./Vana.sh
+            rm -f Vana.sh && wget -q -O Vana.sh https://raw.githubusercontent.com/ksydoruk1508/Vana/main/Vana.sh && sudo chmod +x Vana.sh && ./Vana.sh
             ;;
         9)
-            wget -q -O Nillion.sh https://raw.githubusercontent.com/ksydoruk1508/Nillion/main/Nillion.sh && sudo chmod +x Nillion.sh && ./Nillion.sh
+            rm -f Nillion.sh && wget -q -O Nillion.sh https://raw.githubusercontent.com/ksydoruk1508/Nillion/main/Nillion.sh && sudo chmod +x Nillion.sh && ./Nillion.sh
             ;;    
         10)
-            wget -q -O CysicNode.sh https://raw.githubusercontent.com/ksydoruk1508/CysicNode/main/CysicNode.sh && sudo chmod +x CysicNode.sh && ./CysicNode.sh
+            rm -f CysicNode.sh && wget -q -O CysicNode.sh https://raw.githubusercontent.com/ksydoruk1508/CysicNode/main/CysicNode.sh && sudo chmod +x CysicNode.sh && ./CysicNode.sh
             ;; 
         11) 
-            wget -q -O TitanNode.sh https://raw.githubusercontent.com/ksydoruk1508/TitanNode/main/TitanNode.sh && sudo chmod +x TitanNode.sh && ./TitanNode.sh
+            rm -f TitanNode.sh && wget -q -O TitanNode.sh https://raw.githubusercontent.com/ksydoruk1508/TitanNode/main/TitanNode.sh && sudo chmod +x TitanNode.sh && ./TitanNode.sh
             ;;
         12) 
-            wget -q -O t3rn.sh https://raw.githubusercontent.com/ksydoruk1508/t3rn/main/t3rn.sh && sudo chmod +x t3rn.sh && ./t3rn.sh
+            rm -f t3rn.sh && wget -q -O t3rn.sh https://raw.githubusercontent.com/ksydoruk1508/t3rn/main/t3rn.sh && sudo chmod +x t3rn.sh && ./t3rn.sh
             ;;
         13) 
-            wget -q -O GensynNode.sh https://raw.githubusercontent.com/ksydoruk1508/GensynNode/main/GensynNode.sh && sudo chmod +x GensynNode.sh && ./GensynNode.sh
+            rm -f GensynNode.sh && wget -q -O GensynNode.sh https://raw.githubusercontent.com/ksydoruk1508/GensynNode/main/GensynNode.sh && sudo chmod +x GensynNode.sh && ./GensynNode.sh
             ;;
         14) 
-            wget -q -O UnichainNode.sh https://raw.githubusercontent.com/ksydoruk1508/UnichainNode/main/UnichainNode.sh && sudo chmod +x UnichainNode.sh && ./UnichainNode.sh
+            rm -f UnichainNode.sh && wget -q -O UnichainNode.sh https://raw.githubusercontent.com/ksydoruk1508/UnichainNode/main/UnichainNode.sh && sudo chmod +x UnichainNode.sh && ./UnichainNode.sh
             ;;
         20)
-            wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
+            rm -f Monitoring_of_servers.sh && wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
             ;;
         21)
             echo "Выход / Exit..."
