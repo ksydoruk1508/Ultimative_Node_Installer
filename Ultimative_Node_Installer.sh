@@ -15,7 +15,7 @@ if ! command -v curl &> /dev/null; then
     sudo apt install curl -y
 fi
 
-echo -e "${GREEN}"
+echo -e "${PURPLE}"
 cat << "EOF"
 ██    ██ ██      ████████ ██ ███    ███  █████  ████████ ██ ██    ██ ███████     ███    ██  ██████  ██████  ███████ 
 ██    ██ ██         ██    ██ ████  ████ ██   ██    ██    ██ ██    ██ ██          ████   ██ ██    ██ ██   ██ ██      
@@ -57,7 +57,7 @@ while true; do
     echo " "
     echo -e "${CYAN}1. OceanProtocol${NC}"
     echo -e "${CYAN}2. ElixirNode${NC} ${RED}- END${NC}"
-    echo -e "${CYAN}3. NesaNode${NC}"
+    echo -e "${CYAN}3. NesaNode${NC} ${RED}- END${NC}"
     echo -e "${CYAN}4. RivalzNode${NC} ${RED}- END${NC}"
     echo -e "${CYAN}5. HemiNode${NC} ${RED}- END${NC}"
     echo -e "${CYAN}6. Gaianet${NC}"
