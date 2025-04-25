@@ -50,6 +50,7 @@ Donate: 0x0004230c13c3890F34Bb9C9683b91f539E809000
 EOF
 echo -e "${NC}"
 echo -e "${PURPLE}Все текстовые гайды / All text guides - https://teletype.in/@c6zr7${NC}"
+echo " "
 
 while true; do
     echo -e "${YELLOW}Выберите ноду для установки / Select a node for installation:${NC}"
