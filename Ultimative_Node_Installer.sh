@@ -72,9 +72,9 @@ while true; do
     echo " "
     echo -e "${CYAN}20. Monitoring of servers${NC}"
     echo -e " "
-    echo -e "${PURPLE}Все текстовые гайды / All text guides - https://teletype.in/@c6zr7${NC}"
     echo -e "${CYAN}21. Выйти / Exit${NC}"
     read -p "Введите номер опции / Enter the option number: " choice
+    echo -e "${PURPLE}Все текстовые гайды / All text guides - https://teletype.in/@c6zr7${NC}"
 
     case $choice in
         1)
