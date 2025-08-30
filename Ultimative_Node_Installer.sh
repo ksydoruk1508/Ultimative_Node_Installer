@@ -61,13 +61,17 @@ while true; do
     echo -e "${CYAN}11. TitanNode${NC}"
     echo -e "${CYAN}12. T3rnNode${NC} ${RED}- END${NC}"
     echo -e "${CYAN}13. GensynNode${NC}"
-    echo -e "${CYAN}14. UnichainNode${NC}"
+    echo -e "${CYAN}14. GensynBlockassist${NC}"
+    echo -e "${CYAN}15. UnichainNode${NC}"
+    echo -e "${CYAN}16. DroseraNode${NC}"
+    echo -e "${CYAN}17. AztecNode${NC}"
     echo " "
     echo -e "${YELLOW}Выберите утилиту для установки / Select a utility for installation:${NC}"
     echo " "
     echo -e "${CYAN}20. Monitoring of servers${NC}"
+    echo -e "${CYAN}21. Useful Commands${NC}"
     echo -e " "
-    echo -e "${CYAN}21. Выйти / Exit${NC}"
+    echo -e "${CYAN}0. Выйти / Exit${NC}"
     read -p "Введите номер опции / Enter the option number: " choice
 
     case $choice in
@@ -111,12 +115,24 @@ while true; do
             rm -f GensynNode.sh && wget -q -O GensynNode.sh https://raw.githubusercontent.com/ksydoruk1508/GensynNode/main/GensynNode.sh && sudo chmod +x GensynNode.sh && ./GensynNode.sh
             ;;
         14) 
+            rm -f blockassist.sh && wget -q -O blockassist.sh https://raw.githubusercontent.com/ksydoruk1508/gensyn_blockassist/main/blockassist.sh && sudo chmod +x blockassist.sh && ./blockassist.sh
+            ;;    
+        15) 
             rm -f UnichainNode.sh && wget -q -O UnichainNode.sh https://raw.githubusercontent.com/ksydoruk1508/UnichainNode/main/UnichainNode.sh && sudo chmod +x UnichainNode.sh && ./UnichainNode.sh
             ;;
+        16) 
+            rm -f drosera-node-manager.sh && wget -q -O drosera-node-manager.sh https://raw.githubusercontent.com/k2wGG/scripts/main/drosera-node-manager.sh && sudo chmod +x drosera-node-manager.sh && ./drosera-node-manager.sh
+            ;;
+        17) 
+            rm -f aztec.sh && wget -q -O aztec.sh https://raw.githubusercontent.com/ksydoruk1508/aztec/main/aztec.sh && sudo chmod +x aztec.sh && ./aztec.sh
+            ;;    
         20)
             rm -f Monitoring_of_servers.sh && wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
             ;;
-        21)
+        20)
+            rm -f Useful_Commands.sh && wget -q -O Useful_Commands.sh https://raw.githubusercontent.com/ksydoruk1508/Useful_Commands/main/Useful_Commands.sh && sudo chmod +x Useful_Commands.sh && ./Useful_Commands.sh
+            ;;    
+        0)
             echo "Выход / Exit..."
             break
             ;;
