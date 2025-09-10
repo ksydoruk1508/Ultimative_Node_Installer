@@ -67,6 +67,7 @@ while true; do
     echo -e "${CYAN}15. UnichainNode${NC}"
     echo -e "${CYAN}16. DroseraNode${NC}"
     echo -e "${CYAN}17. AztecNode${NC}"
+    echo -e "${CYAN}18. BlockcastNode${NC}"
     echo " "
     echo -e "${YELLOW}Выберите утилиту для установки / Select a utility for installation:${NC}"
     echo " "
