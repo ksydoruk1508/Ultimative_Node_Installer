@@ -128,6 +128,9 @@ while true; do
         17) 
             rm -f aztec.sh && wget -q -O aztec.sh https://raw.githubusercontent.com/ksydoruk1508/aztec/main/aztec.sh && sudo chmod +x aztec.sh && ./aztec.sh
             ;;    
+        18) 
+            rm -f blockcast.sh && wget -q -O blockcast.sh https://raw.githubusercontent.com/ksydoruk1508/Blockcast/main/blockcast.sh && sudo chmod +x blockcast.sh && ./blockcast.sh
+            ;;            
         20)
             rm -f Monitoring_of_servers.sh && wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
             ;;
