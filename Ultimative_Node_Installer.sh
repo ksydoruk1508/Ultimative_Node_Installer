@@ -135,7 +135,7 @@ while true; do
             rm -f blockcast.sh && wget -q -O blockcast.sh https://raw.githubusercontent.com/ksydoruk1508/Blockcast/main/blockcast.sh && sudo chmod +x blockcast.sh && ./blockcast.sh
             ;;
         19) 
-            rm -f arcium-node-hub.sh && wget -q -O arcium-node-hub.sh arcium-node-hub.sh https://raw.githubusercontent.com/ksydoruk1508/Arcium/main/arcium-node-hub.sh && sudo chmod +x arcium-node-hub.sh && ./arcium-node-hub.sh
+            rm -f arcium-node-hub.sh && wget -q -O arcium-node-hub.sh https://raw.githubusercontent.com/ksydoruk1508/Arcium/main/arcium-node-hub.sh && sudo chmod +x arcium-node-hub.sh && ./arcium-node-hub.sh
             ;;
         20) 
             rm -f stable.sh && wget -q -O stable.sh https://raw.githubusercontent.com/ksydoruk1508/stable/main/stable.sh && sudo chmod +x stable.sh && ./stable.sh
