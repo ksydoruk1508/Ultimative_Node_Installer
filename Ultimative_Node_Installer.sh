@@ -68,11 +68,13 @@ while true; do
     echo -e "${CYAN}16. DroseraNode${NC}"
     echo -e "${CYAN}17. AztecNode${NC}"
     echo -e "${CYAN}18. BlockcastNode${NC}"
+    echo -e "${CYAN}19. ArciumNode${NC}"
+    echo -e "${CYAN}20. StableNode${NC}"
     echo " "
     echo -e "${YELLOW}Выберите утилиту для установки / Select a utility for installation:${NC}"
     echo " "
-    echo -e "${CYAN}20. Monitoring of servers${NC}"
-    echo -e "${CYAN}21. Useful Commands${NC}"
+    echo -e "${CYAN}30. Monitoring of servers${NC}"
+    echo -e "${CYAN}31. Useful Commands${NC}"
     echo -e " "
     echo -e "${CYAN}0. Выйти / Exit${NC}"
     read -p "Введите номер опции / Enter the option number: " choice
@@ -131,11 +133,17 @@ while true; do
             ;;    
         18) 
             rm -f blockcast.sh && wget -q -O blockcast.sh https://raw.githubusercontent.com/ksydoruk1508/Blockcast/main/blockcast.sh && sudo chmod +x blockcast.sh && ./blockcast.sh
-            ;;            
-        20)
+            ;;
+        19) 
+            rm -f arcium-node-hub.sh && wget -q -O blockcast.sh https://raw.githubusercontent.com/ksydoruk1508/Arcium/main/blockcast.sh && sudo chmod +x arcium-node-hub.sh && ./arcium-node-hub.sh
+            ;;
+        20) 
+            rm -f stable.sh && wget -q -O blockcast.sh https://raw.githubusercontent.com/ksydoruk1508/stable/main/stable.sh && sudo chmod +x stable.sh && ./stable.sh
+            ;;    
+        30)
             rm -f Monitoring_of_servers.sh && wget -q -O Monitoring_of_servers.sh https://raw.githubusercontent.com/ksydoruk1508/monitoring_of_servers/main/Monitoring_of_servers.sh && sudo chmod +x Monitoring_of_servers.sh && ./Monitoring_of_servers.sh
             ;;
-        20)
+        31)
             rm -f Useful_Commands.sh && wget -q -O Useful_Commands.sh https://raw.githubusercontent.com/ksydoruk1508/Useful_Commands/main/Useful_Commands.sh && sudo chmod +x Useful_Commands.sh && ./Useful_Commands.sh
             ;;    
         0)
